@@ -107,7 +107,6 @@ WORKDIR /sdv
 
 # Copy the executable from the "build" stage.
 COPY --from=build /sdv/service /sdv/
-# Copy the build directory so that we can access the necessary configuration files from the out_dir
 COPY --from=build /sdv/target/aarch64-unknown-linux-gnu/release/build/ /sdv/target/aarch64-unknown-linux-gnu/release/build/
 
 # Copy from config override directory into where Freyja expects it
