@@ -88,8 +88,6 @@ RUN mkdir -p /sdv/config \
 FROM --platform=$TARGETPLATFORM docker.io/library/debian:bullseye-slim AS final
 ARG UID
 ARG CONFIG_PATH
-# Target architecture to cross-compile
-ARG TARGETARCH
 
 # Copy container scripts.
 COPY ./container/scripts/*.sh /sdv/scripts/
